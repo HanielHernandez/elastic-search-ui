@@ -1,5 +1,30 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Generating Docs
+in order to generate docs use for this example first create an **.env.local** nd add the enviroment variables based on the **env.example** file.
+
+```bash
+//* .env.local
+ELASTIC_SEARCH_ENGINE_NAME= <PRODUCT-ENGINE-NAME>
+ELASTIC_SEARCH_ENDPOINT_BASE= <endpoint-base>
+ELASTIC_SEARCH_SEARCH_KEY= <search-key>
+```
+
+secondly on **package.json** add the follwing lines before the private property
+
+```json
+ "type": "module" 
+```
+
+ next run the following command
+
+```bash
+  npm run generate
+```
+
+once the index was generated remember to remove the line we previously added on **package.json**
+ 
+
 ## Getting Started
 
 First, run the development server:
